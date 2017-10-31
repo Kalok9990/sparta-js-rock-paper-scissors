@@ -28,3 +28,9 @@ Setup:-
 
 __**Things to think about**__
 * Try and separate your code out into functions
+
+# Difficulties
+One main difficulty was to get the random generator working, as I had multiple times where the generator would favour one number over another constantly.
+
+# Pleased
+Pleased at how quick I managed to get the code working.
