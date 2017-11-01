@@ -1,9 +1,8 @@
-var player, comp;
 winorlose();
 
 function winorlose(){
-  player = 0;
-  comp = 0;
+  var player = 0;
+  var comp = 0;
   do {
     AI = Math.floor(Math.random() * 3) + 1;
     var choice = prompt("1) Rock, 2) paper or 3)scissors?");
@@ -59,10 +58,10 @@ function winorlose(){
     }
     alert("Player: " +player + " Computer: " + comp)
   } while (player < 5 && comp < 5);
-  winner();
+  winner(player, comp);
 }
 
-function again(){
+function again(player, comp){
   //Function to ask if player wants to play again
   var again = prompt("Would you like to play again?(y or n)")
   if(again == "y"){
@@ -72,13 +71,13 @@ function again(){
   }
 }
 
-function winner(){
+function winner(player, comp){
   //Function to bring alert to check if there is a winner
   if(player === 5){
     alert("Player wins!");
     again();
   }else if(comp === 5){
     alert("Computer wins!!")
-    again();
+    again(player, comp);
   }
 }
