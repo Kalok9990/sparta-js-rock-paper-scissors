@@ -3,11 +3,6 @@ function getUserInput(){
   return prompt("PLease choose either rock, paper or scissors");
 }
 
-//Get the player move
-function getPlayerMove(){
-  return getUserInput();
-}
-
 //Random play
 function randomPlay(){
   var randomNum = Math.floor(Math.random() * 3);
@@ -19,11 +14,18 @@ function randomPlay(){
     return "scissors";
   }
 }
+//Get the player move
+function getPlayerMove(playerMove){
+  return playerMove || getUserInput();
+}
 
-var test = randomPlay();
-console.log(test);
 //Get the computer move
+function getComputerMove(computerMove){
+  return computerMove || randomPlay();
+}
 
+var test = getComputerMove();
+console.log(test);
 //will need to play to 5
 
 //check for winner
